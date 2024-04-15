@@ -111,3 +111,21 @@ Or a more complicated thresholding scheme:
     GROUP BY 1
     ;
 
+### Changing types
+
+When importing data sometimes it is of an inappropriate format like string representation of numeric data. In these cases, we can recast the data type with `::` as in `price::float`. Some data types cannot be cast to other data types like VARCHAR to BOOL.
+
+### Missing data
+
+The term **null** represents missing data. The null placeholder can be present from importing a sparse dataset or even making a join without complete correspondence among columns.
+
+One major challenge with null values is that they do cause most functions to fail if they are included in the process. You can transform null values using either `CASE` or even `COALESCE` which takes in two or more arguments and returns the first argument that is not null.
+
+    coalesce(num_orders,0)
+    coalesce(address,'Unknown')
+    coalesce(column_a,column_b)
+    coalesce(column_a,column_b,column_c)
+
+Note that null will not be retrieved using conditional statements unless explicitly asked for. For example, if you use `CASE` to find fields that do not contain a certain value, any value with null will not be considered and thus be omitted.
+
+
