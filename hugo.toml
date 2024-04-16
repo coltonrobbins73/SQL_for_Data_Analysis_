@@ -7,7 +7,7 @@ theme = 'study_blog_relearn'
 
 [[menu.shortcuts]]
     name = "<i class='fas fa-book'></i> Back to compact directory"
-    url = 'https://compact-curriculum.github.io/directory/materials/index.html'
+    url = 'https://compact-curriculum.github.io/Directory/materials/index.html'
     weight = 11
 
 [[menu.shortcuts]]
