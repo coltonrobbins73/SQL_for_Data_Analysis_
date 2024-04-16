@@ -128,4 +128,4 @@ One major challenge with null values is that they do cause most functions to fai
 
 Note that null will not be retrieved using conditional statements unless explicitly asked for. For example, if you use `CASE` to find fields that do not contain a certain value, any value with null will not be considered and thus be omitted.
 
-
+You can also use
