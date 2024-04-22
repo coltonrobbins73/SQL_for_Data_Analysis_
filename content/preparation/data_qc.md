@@ -128,4 +128,18 @@ One major challenge with null values is that they do cause most functions to fai
 
 Note that null will not be retrieved using conditional statements unless explicitly asked for. For example, if you use `CASE` to find fields that do not contain a certain value, any value with null will not be considered and thus be omitted.
 
-You can also use
+###### Imputation
+
+Missing data can be approximated using the existing data on hand. Defining the average data value with median or mean can be a good replacement when there are missing entries. Another method is to use a fill-forward or fill-backward technique which uses values from adjacent entries. Not that adjacent filling only really works when the entry order has some logical relationship.
+
+### Adding data dimensions
+
+Data dimensions are essentially look-up tables that can be used to calculate new data entries. One of the most common data dimensions is a date dimension table that contains standard information for each date for 10s to hundreds of years in the future or past. A date dimension can thus be used to quickly retrieve attributes about a specified date.
+
+### Analyzing data shape
+
+The shape of your data refers to the column and row dimensions of your various.
+
+###### Pivot tables
+
+A pivot table is a way to summerize a data table using values from one of your tables. Typically, the chosen pivot columns will have duplicate entries accross multiple rows so that summary functions can be used against multiple rows (think groupby for python). For example, a table that records sales can be pivotted using a sum aggregation on a column that records quarters. The resulting pivot table will view selected columns with additional columns for each quarter that show the sum of sales for that quarter. Multiple columns can be pivotted on in a single table to show different combinations of values.
