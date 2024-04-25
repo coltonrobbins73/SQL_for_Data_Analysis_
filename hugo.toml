@@ -60,7 +60,7 @@ theme = 'study_blog_relearn'
   mermaidZoom = true
   ordersectionsby = 'weight'
   showVisitedLinks = true
-  themeVariantModifier = ''
+  themeVariantAuto = ['relearn-dark', 'relearn-dark']
   titleSeparator = '::'
 
   [params.author]
